@@ -1,8 +1,8 @@
 name: battery_indicator
 description: A battery indicator widget.
 version: 0.0.1
-author:
-homepage:
+author: DebuggerX
+homepage: https://github.com/debuggerx01/battery_indicator
 
 dependencies:
   flutter:
@@ -12,6 +12,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+environment:
+  sdk: ">=2.0.0-dev.28.0 <3.0.0"
+  flutter: ">=0.1.4 <2.0.0"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
