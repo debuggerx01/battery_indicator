@@ -1,0 +1,18 @@
+.DS_Store
+.dart_tool/
+
+.packages
+.pub/
+
+build/
+ios/.generated/
+ios/Flutter/Generated.xcconfig
+ios/Runner/GeneratedPluginRegistrant.*
+
+*.iml
+/pubspec.lock
+.flutter-plugins
+将删除 .idea/
+将删除 example/.flutter-plugins
+/flutter_battery_indicator.iml
+.idea
