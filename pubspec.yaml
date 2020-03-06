@@ -7,7 +7,7 @@ homepage: https://github.com/debuggerx01/battery_indicator
 dependencies:
   flutter:
     sdk: flutter
-  battery: ^0.2.1
+  battery: ^0.3.1+8
 
 dev_dependencies:
   flutter_test:
