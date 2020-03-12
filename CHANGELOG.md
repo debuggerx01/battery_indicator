@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Support 1.0.0 version of stable dependencies. ([dart_lsc](http://github.com/amirh/dart_lsc))
+
 ## [0.0.3] 
 Updated to use latest version of battery
 
