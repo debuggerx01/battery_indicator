@@ -1,12 +1,12 @@
 name: battery_indicator
 description: A battery indicator widget.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/debuggerx01/battery_indicator
 
 dependencies:
   flutter:
     sdk: flutter
-  battery: ^0.3.1+8
+  battery: '>=0.3.1+8 <2.0.0'
 
 dev_dependencies:
   flutter_test:
