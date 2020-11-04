@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new SizedBox(
-              width: 100.0,
+              width: 200.0,
               height: 100.0,
               child: new Center(
                 child: new BatteryIndicator(
@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   new Expanded(
                     child: new Slider(
                       min: 8.0,
-                      max: 38.0,
+                      max: 48.0,
                       divisions: 300,
                       label: '${_size.toStringAsFixed(1)}',
                       value: _size,

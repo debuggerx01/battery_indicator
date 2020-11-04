@@ -35,6 +35,9 @@ class BatteryIndicator extends StatefulWidget {
   /// default to 14.0
   final double size;
 
+  /// battery value font size, default to null
+  final double percentNumSize;
+
   BatteryIndicator(
       {this.style = BatteryIndicatorStyle.flat,
       this.ratio = 2.5,
@@ -42,6 +45,7 @@ class BatteryIndicator extends StatefulWidget {
       this.colorful = true,
       this.showPercentNum = true,
       this.showPercentSlide = true,
+      this.percentNumSize,
       this.size = 14.0});
 
   @override
@@ -74,11 +78,11 @@ class _BatteryIndicatorState extends State<BatteryIndicator> {
               child: widget.showPercentNum
                   ? new Text(
                       '$batteryLv',
-                      style: new TextStyle(fontSize: widget.size - 2),
+                      style: new TextStyle(fontSize: widget.percentNumSize ?? widget.size * 0.9),
                     )
                   : new Text(
                       '',
-                      style: new TextStyle(fontSize: widget.size - 2),
+                      style: new TextStyle(fontSize: widget.percentNumSize ?? widget.size * 0.9),
                     ),
             ),
           ),
