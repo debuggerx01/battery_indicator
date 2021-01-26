@@ -24,6 +24,11 @@ Example with GetX
 
 To use this plugin, add `battery_indicator` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
+```
+dependencies:
+  battery_indicator: ^0.0.5
+```
+
 ### Example :iphone:
 
 ##### You can check this example in the folder [example]
