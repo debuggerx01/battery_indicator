@@ -16,8 +16,8 @@ Example with native flutter
 Example with GetX
 
 <p float="left">
-<img src="./example_custom_battery_getx/screenshots/1.jpeg"  width="25%" height="35%" />
-<img src="./example_custom_battery_getx/screenshots/2.jpeg"  width="25%" height="35%" />
+<img src="./example_custom_battery_get_x/screenshots/1.jpeg"  width="25%" height="35%" />
+<img src="./example_custom_battery_get_x/screenshots/2.jpeg"  width="25%" height="35%" />
 </p>
 
 ## Usage :clipboard:
