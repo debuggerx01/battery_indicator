@@ -1,14 +1,14 @@
-# flutter_battery_indicator
+# flutter_battery_indicator :battery:
 
 A battery indicator widget
 
 ![](https://github.com/debuggerx01/battery_indicator/blob/master/example/battery_indicator.gif?raw=true)
 
-## Usage
+## Usage :clipboard:
 
 To use this plugin, add `battery_indicator` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
-### Example
+### Example :iphone:
 
 ##### You can check this example in the folder [example]
 
@@ -61,7 +61,7 @@ void decrement() {
     }
   });
 }
-
+...
 // Instantiate it, add the flag batteryFromPhone, and a
 // value to control the battery level
 BatteryIndicator(
@@ -80,7 +80,7 @@ BatteryIndicator(
 
 ```
 
-## Getting Started
+## Getting Started :rocket:
 
 For help getting started with Flutter, view our online [documentation](https://flutter.io/).
 
