@@ -4,6 +4,22 @@ A battery indicator widget
 
 ![](https://github.com/debuggerx01/battery_indicator/blob/master/example/battery_indicator.gif?raw=true)
 
+## Screenshots :camera:
+
+Example with native flutter
+
+<p float="left">
+<img src="./example_custom_battery/screenshots/1.jpeg"  width="25%" height="35%" />
+<img src="./example_custom_battery/screenshots/2.jpeg"  width="25%" height="35%" />
+</p>
+
+Example with GetX
+
+<p float="left">
+<img src="./example_custom_battery_getx/screenshots/1.jpeg"  width="25%" height="35%" />
+<img src="./example_custom_battery_getx/screenshots/2.jpeg"  width="25%" height="35%" />
+</p>
+
 ## Usage :clipboard:
 
 To use this plugin, add `battery_indicator` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
