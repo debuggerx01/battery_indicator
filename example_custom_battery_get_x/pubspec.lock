@@ -9,7 +9,7 @@ packages:
     source: hosted
     version: "2.5.0-nullsafety.1"
   battery:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: battery
       url: "https://pub.dartlang.org"
