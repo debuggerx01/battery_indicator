@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:battery_indicator/battery_indicator.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -22,17 +22,17 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   var _styleItems = [
-    new DropdownMenuItem(
-      child: new Text('skeumorphism'),
+    DropdownMenuItem(
+      child: Text('skeumorphism'),
       value: 1,
     ),
-    new DropdownMenuItem(
-      child: new Text('flat'),
+    DropdownMenuItem(
+      child: Text('flat'),
       value: 0,
     ),
   ];
@@ -69,14 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget getColorSelector(Color color) {
-    return new GestureDetector(
+    return GestureDetector(
       onTap: () {
         setState(() {
           print(color);
           _color = color;
         });
       },
-      child: new CircleAvatar(
+      child: CircleAvatar(
         backgroundColor: color,
       ),
     );
@@ -84,19 +84,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      body: new Center(
-        child: new Column(
+      body: Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new SizedBox(
+            SizedBox(
               width: 200.0,
               height: 100.0,
-              child: new Center(
-                child: new BatteryIndicator(
+              child: Center(
+                child: BatteryIndicator(
                   batteryFromPhone: false,
                   batteryLevel: bat,
                   style: BatteryIndicatorStyle.values[_styleIndex],
@@ -109,12 +109,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            new Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
-              child: new Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  new Text('color:'),
+                  Text('color:'),
                   getColorSelector(Colors.blue),
                   getColorSelector(Colors.red),
                   getColorSelector(Colors.black),
@@ -124,14 +124,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            new Padding(
+            Padding(
               padding: const EdgeInsets.all(8.0),
-              child: new Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  new Text('size:'),
-                  new Expanded(
-                    child: new Slider(
+                  Text('size:'),
+                  Expanded(
+                    child: Slider(
                       min: 8.0,
                       max: 48.0,
                       divisions: 300,
@@ -144,9 +144,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                     ),
                   ),
-                  new Text('ratio:'),
-                  new Expanded(
-                    child: new Slider(
+                  Text('ratio:'),
+                  Expanded(
+                    child: Slider(
                       min: 1.0,
                       max: 4.0,
                       divisions: 30,
@@ -162,11 +162,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            new Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                new Text('colorful:'),
-                new Checkbox(
+                Text('colorful:'),
+                Checkbox(
                   value: _colorful,
                   onChanged: (val) {
                     setState(() {
@@ -174,8 +174,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                 ),
-                new Text('percentNum:'),
-                new Checkbox(
+                Text('percentNum:'),
+                Checkbox(
                   value: _showPercentNum,
                   onChanged: (val) {
                     setState(() {
@@ -183,8 +183,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                 ),
-                new Text('percentSlide:'),
-                new Checkbox(
+                Text('percentSlide:'),
+                Checkbox(
                   value: _showPercentSlide,
                   onChanged: (val) {
                     setState(() {
@@ -194,11 +194,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-            new Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                new Text('style:'),
-                new DropdownButton(
+                Text('style:'),
+                DropdownButton(
                   value: _styleIndex,
                   items: _styleItems,
                   onChanged: (val) {
