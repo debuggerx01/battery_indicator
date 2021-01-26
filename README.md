@@ -31,6 +31,8 @@ dependencies:
 
 ### Example :iphone:
 
+### You can use your phone battery to display in the widget :one:
+
 ##### You can check this example in the folder [example]
 
 ```dart
@@ -53,7 +55,7 @@ BatteryIndicator(
 
 ```
 
-### Also you can provide your own battery value
+### Also you can provide your own battery value :two:
 
 ##### You can check this example in the folder [example_custom_battery]
 
@@ -101,7 +103,7 @@ BatteryIndicator(
 
 ```
 
-### Also you can provide your own battery value with GetX
+### Also you can provide your own battery value with GetX :three:
 
 ##### You can check this example in the folder [example_custom_battery_get_x]
 
