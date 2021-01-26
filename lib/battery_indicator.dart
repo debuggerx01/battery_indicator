@@ -47,7 +47,7 @@ class BatteryIndicator extends StatefulWidget {
 
   BatteryIndicator(
       {this.batteryFromPhone = true,
-      this.batteryLevel = 15,
+      this.batteryLevel = 25,
       this.style = BatteryIndicatorStyle.flat,
       this.ratio = 2.5,
       this.mainColor = Colors.black,
