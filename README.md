@@ -1,6 +1,6 @@
 # flutter_battery_indicator :battery:
 
-A battery indicator widget
+A battery indicator widget, you can use the phone battery value to display, and also you can provide your own value for the battery level.
 
 ![](https://github.com/debuggerx01/battery_indicator/blob/master/example/battery_indicator.gif?raw=true)
 
@@ -29,7 +29,7 @@ dependencies:
   battery_indicator: ^0.0.5
 ```
 
-### Example :iphone:
+### Examples :iphone:
 
 ### You can use your phone battery to display in the widget :one:
 
