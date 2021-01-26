@@ -80,6 +80,57 @@ BatteryIndicator(
 
 ```
 
+### Also you can provide your own battery value with GetX
+
+##### You can check this example in the folder [example_custom_battery_get_x]
+
+home_view.dart
+
+```dart
+ Obx(() => BatteryIndicator(
+      batteryFromPhone: false,
+      batteryLevel: controller.bat.value,
+      style: controller.myStyle,
+      colorful: controller.colorful,
+      showPercentNum: controller.showPercentNum,
+      mainColor: controller.color,
+      size: controller.size,
+      ratio: controller.ratio,
+      showPercentSlide: controller.showPercentSlide)
+  )
+```
+
+home_controller.dart
+
+```dart
+class HomeController extends GetxController {
+  //0,flat and 1,skeumorphism
+  BatteryIndicatorStyle myStyle = BatteryIndicatorStyle.values[0];
+
+  var colorful = true;
+  var showPercentSlide = true;
+  var showPercentNum = true;
+  var size = 35.0;
+  var ratio = 6.0;
+  Color color = Colors.blue;
+  RxInt bat = RxInt(35);
+
+
+  @override
+  void onClose() {}
+  void increment() {
+    if (bat.value < 100) {
+      bat.value++;
+    }
+  }
+  void decrement() {
+    if (bat.value > 0) {
+      bat.value--;
+    }
+  }
+}
+```
+
 ## Getting Started :rocket:
 
 For help getting started with Flutter, view our online [documentation](https://flutter.io/).
