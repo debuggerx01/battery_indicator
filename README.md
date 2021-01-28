@@ -154,7 +154,7 @@ class HomeController extends GetxController {
 }
 ```
 
-## Special Thanks:
+## Special Thanks :+1:
 [WilliBobadilla](https://github.com/WilliBobadilla)
 
 ## Getting Started :rocket:
