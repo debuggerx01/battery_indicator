@@ -1,3 +1,6 @@
+## [0.0.6]
+* now can control manually the battery level ([issue#7](https://github.com/debuggerx01/battery_indicator/issues/7) [pr#8](https://github.com/debuggerx01/battery_indicator/pull/8))
+
 ## [0.0.5]
 
 * now can set percent number size, and default to 90% of indicator size ([issue6](https://github.com/debuggerx01/battery_indicator/issues/6))
