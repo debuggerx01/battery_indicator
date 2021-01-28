@@ -154,6 +154,9 @@ class HomeController extends GetxController {
 }
 ```
 
+## Special Thanks:
+[WilliBobadilla](https://github.com/WilliBobadilla)
+
 ## Getting Started :rocket:
 
 For help getting started with Flutter, view our online [documentation](https://flutter.io/).
