@@ -2,7 +2,7 @@ library battery_indicator;
 
 import 'package:flutter/material.dart';
 
-import 'package:battery/battery.dart';
+import 'package:battery_plus/battery_plus.dart';
 
 enum BatteryIndicatorStyle { flat, skeumorphism }
 
@@ -36,26 +36,26 @@ class BatteryIndicator extends StatefulWidget {
   final double size;
 
   /// battery value font size, default to null
-  final double percentNumSize;
+  final double? percentNumSize;
 
   ///boolean to choose from where to obtain the value of the battery
   ///if it is true, the indicator will update in base of the phone battery,
   ///if not, you can controll with a variable
   final bool batteryFromPhone;
 
-  int batteryLevel;
+  final int batteryLevel;
 
   BatteryIndicator(
       {this.batteryFromPhone = true,
-      this.batteryLevel = 25,
-      this.style = BatteryIndicatorStyle.flat,
-      this.ratio = 2.5,
-      this.mainColor = Colors.black,
-      this.colorful = true,
-      this.showPercentNum = true,
-      this.showPercentSlide = true,
-      this.percentNumSize,
-      this.size = 14.0});
+        this.batteryLevel = 25,
+        this.style = BatteryIndicatorStyle.flat,
+        this.ratio = 2.5,
+        this.mainColor = Colors.black,
+        this.colorful = true,
+        this.showPercentNum = true,
+        this.showPercentSlide = true,
+        this.percentNumSize,
+        this.size = 14.0});
 
   @override
   _BatteryIndicatorState createState() => _BatteryIndicatorState();
@@ -95,15 +95,15 @@ class _BatteryIndicatorState extends State<BatteryIndicator> {
                       : widget.size * widget.ratio * 0.04),
               child: widget.showPercentNum
                   ? Text(
-                      '$batteryLv',
-                      style: TextStyle(
-                          fontSize: widget.percentNumSize ?? widget.size * 0.9),
-                    )
+                '$batteryLv',
+                style: TextStyle(
+                    fontSize: widget.percentNumSize ?? widget.size * 0.9),
+              )
                   : Text(
-                      '',
-                      style: TextStyle(
-                          fontSize: widget.percentNumSize ?? widget.size * 0.9),
-                    ),
+                '',
+                style: TextStyle(
+                    fontSize: widget.percentNumSize ?? widget.size * 0.9),
+              ),
             ),
           ),
         ),
@@ -196,7 +196,7 @@ class BatteryIndicatorPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
     return (oldDelegate as BatteryIndicatorPainter).batteryLv != batteryLv ||
-        (oldDelegate as BatteryIndicatorPainter).mainColor != mainColor;
+        (oldDelegate).mainColor != mainColor;
   }
 
   get fixedBatteryLv => batteryLv < 10 ? 4 + batteryLv / 2 : batteryLv;
@@ -204,6 +204,6 @@ class BatteryIndicatorPainter extends CustomPainter {
   get getBatteryLvColor => batteryLv < 15
       ? Colors.red
       : batteryLv < 30
-          ? Colors.orange
-          : Colors.green;
+      ? Colors.orange
+      : Colors.green;
 }

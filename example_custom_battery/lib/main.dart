@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -171,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   value: _colorful,
                   onChanged: (val) {
                     setState(() {
-                      _colorful = val;
+                      _colorful = val ?? _colorful;
                     });
                   },
                 ),
@@ -180,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   value: _showPercentNum,
                   onChanged: (val) {
                     setState(() {
-                      _showPercentNum = val;
+                      _showPercentNum = val ?? _showPercentNum;
                     });
                   },
                 ),
@@ -189,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   value: _showPercentSlide,
                   onChanged: (val) {
                     setState(() {
-                      _showPercentSlide = val;
+                      _showPercentSlide = val ?? _showPercentSlide;
                     });
                   },
                 ),
@@ -204,7 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   items: _styleItems,
                   onChanged: (val) {
                     setState(() {
-                      _styleIndex = val;
+                      _styleIndex = val as int;
                     });
                   },
                 ),

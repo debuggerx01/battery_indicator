@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:battery/battery.dart';
-
 //enum BatteryIndicatorStyle { flat, skeumorphism }
 import 'package:battery_indicator/battery_indicator.dart';
 
@@ -27,13 +25,11 @@ class HomeController extends GetxController {
   RxInt bat = RxInt(35);
 
   @override
-  void onInit() {}
-
-  @override
   void onReady() async {}
 
   @override
   void onClose() {}
+
   void increment() {
     if (bat.value < 100) {
       bat.value++;
