@@ -26,7 +26,7 @@ To use this plugin, add `battery_indicator` as a [dependency in your pubspec.yam
 
 ```
 dependencies:
-  battery_indicator: ^0.0.5
+  battery_indicator: ^0.1.0
 ```
 
 ### Examples :iphone:
