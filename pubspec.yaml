@@ -1,6 +1,6 @@
 name: battery_indicator
 description: A battery indicator widget.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/debuggerx01/battery_indicator
 
 environment:

@@ -1,3 +1,6 @@
+## [0.1.1]
+* [battery_plus](https://pub.dev/packages/battery_plus) package version increased [pr#11](https://github.com/debuggerx01/battery_indicator/pull/11).
+
 ## [0.1.0]
 * migrate to null safety.
 
