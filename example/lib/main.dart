@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:battery_indicator/battery_indicator.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,29 +13,29 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var _styleItems = [
-    DropdownMenuItem(
-      child: Text('skeumorphism'),
+  final _styleItems = [
+    const DropdownMenuItem(
       value: 1,
+      child: Text('skeumorphism'),
     ),
-    DropdownMenuItem(
-      child: Text('flat'),
+    const DropdownMenuItem(
       value: 0,
+      child: Text('flat'),
     ),
   ];
 
@@ -54,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return GestureDetector(
       onTap: () {
         setState(() {
-          print(color);
           _color = color;
         });
       },
@@ -94,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('color:'),
+                  const Text('color:'),
                   getColorSelector(Colors.blue),
                   getColorSelector(Colors.red),
                   getColorSelector(Colors.black),
@@ -109,13 +110,13 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text('size:'),
+                  const Text('size:'),
                   Expanded(
                     child: Slider(
                       min: 8.0,
                       max: 48.0,
                       divisions: 300,
-                      label: '${_size.toStringAsFixed(1)}',
+                      label: _size.toStringAsFixed(1),
                       value: _size,
                       onChanged: (val) {
                         setState(() {
@@ -124,13 +125,13 @@ class _MyHomePageState extends State<MyHomePage> {
                       },
                     ),
                   ),
-                  Text('ratio:'),
+                  const Text('ratio:'),
                   Expanded(
                     child: Slider(
                       min: 1.0,
                       max: 4.0,
                       divisions: 30,
-                      label: '${_ratio.toStringAsFixed(1)}',
+                      label: _ratio.toStringAsFixed(1),
                       value: _ratio,
                       onChanged: (val) {
                         setState(() {
@@ -145,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Text('colorful:'),
+                const Text('colorful:'),
                 Checkbox(
                   value: _colorful,
                   onChanged: (val) {
@@ -154,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                 ),
-                Text('percentNum:'),
+                const Text('percentNum:'),
                 Checkbox(
                   value: _showPercentNum,
                   onChanged: (val) {
@@ -163,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                 ),
-                Text('percentSlide:'),
+                const Text('percentSlide:'),
                 Checkbox(
                   value: _showPercentSlide,
                   onChanged: (val) {
@@ -177,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Text('style:'),
+                const Text('style:'),
                 DropdownButton(
                   value: _styleIndex,
                   items: _styleItems,
